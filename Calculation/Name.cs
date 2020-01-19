@@ -6,6 +6,7 @@ namespace Calculation
 {
   public  class Name
     {
+        public string NikeName { get; set; }
         public string GetFullName(string firstName,string lastName)
         {
             return firstName +" " + lastName;

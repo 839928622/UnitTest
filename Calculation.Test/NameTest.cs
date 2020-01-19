@@ -17,6 +17,15 @@ namespace Calculation.Test
           Assert.Contains("leo", res);
           Assert.StartsWith("l",res);
           Assert.Matches("[a-z][a-z]",res);//可以使用正则表达式
+          Assert.True(!string.IsNullOrWhiteSpace(res));//可以判断是否是空字串或者null  Assert.True返回true才会通过
+          Assert.False(string.IsNullOrWhiteSpace(res));//上面的可读性比较差，换成21行，结果为false，则通过
+        }
+
+        [Fact]
+        public void NikeNameMustBeNull()
+        {
+            var name = new Name();
+            Assert.Null(name.NikeName);
         }
     }
 }
