@@ -22,5 +22,12 @@ namespace Calculation.Test
             Assert.InRange(customer.Age,25,40);//数值是否在该范围 年龄默认值是35
             Assert.InRange(customer.Age, 35, 35);// 这个是大于等于且小于等于的关系
         }
+
+        [Fact]
+        public void GetCustomerAddressNoByNameNull()
+        {
+            var customer = new Customer();
+            Assert.Throws<ArgumentNullException>(() => customer.GetCustomerAddressNo(null));//判断是否会抛出异常
+        }
     }
 }

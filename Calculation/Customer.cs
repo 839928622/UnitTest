@@ -8,5 +8,15 @@ namespace Calculation
    {
        public string Name => "Alex";
        public int Age  => 35;
+
+       public int GetCustomerAddressNo(string customerName)
+       {
+           if (string.IsNullOrWhiteSpace(customerName))
+           {
+               throw new ArgumentNullException();
+           }
+
+           return 1;
+       }
     }
 }
