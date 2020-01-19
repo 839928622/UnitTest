@@ -10,5 +10,11 @@ namespace Calculation
         {
             return a + b;
         }
+
+        public double AddDouble(double a, double b)
+        {
+            return a + b;
+        }
     }
+
 }
