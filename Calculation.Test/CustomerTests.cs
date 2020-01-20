@@ -28,6 +28,9 @@ namespace Calculation.Test
         {
             var customer = new Customer();
             Assert.Throws<ArgumentNullException>(() => customer.GetCustomerAddressNo(null));//判断是否会抛出异常
+
+            var exception = Assert.Throws<ArgumentNullException>(() => customer.GetCustomerAddressNo(null));//可以获取异常里的消息
+             Assert.Equal("错误消息", exception.Message);   
         }
     }
 }
