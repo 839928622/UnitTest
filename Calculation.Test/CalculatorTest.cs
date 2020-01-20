@@ -15,6 +15,8 @@ namespace Calculation.Test
         }
     }
 
+
+
   public  class CalculatorTest :IClassFixture<CalculatorFixture> //这里会创建XUnit会创建单例的 CalculatorFixture，transident模式 。这么做的好处就是，每一个方法不需要我们再去new 新的对象，浪费资源，每次执行一个test的时候，这个构造函数总是被执行
     {
         private readonly CalculatorFixture _calculatorFixture;

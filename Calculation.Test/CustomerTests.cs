@@ -5,8 +5,16 @@ using Xunit;
 
 namespace Calculation.Test
 {
+    [Collection("客户相关")] //我们假装他是计算器类
   public  class CustomerTests
     {
+        private readonly CustomerFixture _customerFixture;
+
+        public CustomerTests(CustomerFixture customerFixture)
+        {
+            _customerFixture = customerFixture;
+        }
+
         [Fact]
         public void CheckNameNotEmpty()
         {
