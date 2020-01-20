@@ -6,6 +6,7 @@ namespace Calculation.Test
     public class FiboTest
     {
         [Fact]
+        [Trait("类别","斐波那契数列")]
         public void FiboNumbersNotContainsZero()
         {
             var fibo = new Fibo();
@@ -13,6 +14,7 @@ namespace Calculation.Test
         }
 
         [Fact] //斐波那契数列必须包含13
+        [Trait("类别", "斐波那契数列")]
         public void FiboMustContains13()
         {
             var fibo = new Fibo();
@@ -20,6 +22,7 @@ namespace Calculation.Test
         }
 
         [Fact]
+        [Trait("类别", "斐波那契数列")]
         public void FiboNotContains4()
         {
             var fibo = new Fibo();
